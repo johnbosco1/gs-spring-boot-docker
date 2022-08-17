@@ -37,7 +37,7 @@ stages:
         jdkVersionOption: '1.8'
         jdkArchitectureOption: 'x64'
         publishJUnitResults: true
-        testResultsFiles: ''$(Build.SourcesDirectory)/test/*.sh'
+        testResultsFiles: '$(Build.SourcesDirectory)/test/*.sh'
         goals: 'package'
         options: 'package'
 
