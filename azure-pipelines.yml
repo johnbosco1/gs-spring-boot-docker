@@ -38,6 +38,7 @@ stages:
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
         goals: 'package'
+        options: 'package'
 
     - task: Docker@2
       displayName: Build and push an image to container registry
