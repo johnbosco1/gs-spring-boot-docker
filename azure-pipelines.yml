@@ -37,7 +37,7 @@ stages:
         jdkVersionOption: '1.8'
         jdkArchitectureOption: 'x64'
         publishJUnitResults: true
-        testResultsFiles: '$(Build.SourcesDirectory)/complete/TEST-*.xml'
+        testResultsFiles: '$(Build.SourcesDirectory)/complete/test/java/hello/*.java'
         goals: 'package'
         options: 'package'
 
