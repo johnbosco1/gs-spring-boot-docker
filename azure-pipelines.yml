@@ -37,7 +37,7 @@ stages:
         jdkVersionOption: '1.8'
         jdkArchitectureOption: 'x64'
         publishJUnitResults: true
-        testResultsFiles: '$(Build.SourcesDirectory)/complete/src/test/java/hello/*.java'
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
         goals: 'package'
         options: 'package'
 
