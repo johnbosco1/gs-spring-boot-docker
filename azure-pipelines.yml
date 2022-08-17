@@ -28,7 +28,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
-    - task: Maven@3
+    - task: Maven@3.205.1
       inputs:
         mavenPomFile: '$(Build.SourcesDirectory)/complete/pom.xml'
         mavenOptions: '-Xmx3072m'
@@ -37,7 +37,7 @@ stages:
         jdkVersionOption: '1.8'
         jdkArchitectureOption: 'x64'
         publishJUnitResults: true
-        testResultsFiles: '$(Build.SourcesDirectory)/complete/*.xml'
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
         goals: 'package'
         options: 'package'
 
